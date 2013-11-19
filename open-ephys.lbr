@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.02" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2098,7 +2098,7 @@
 <wire x1="1.375" y1="-1.5" x2="1.375" y2="1.5" width="0.127" layer="21"/>
 <wire x1="1.375" y1="1.5" x2="-1.375" y2="1.5" width="0.127" layer="21"/>
 <circle x="-1.625" y="2.25" radius="0.353553125" width="0.127" layer="21"/>
-<text x="-0.089" y="-0.111" size="0.762" layer="21" font="vector" ratio="10" distance="100" rot="R90" align="center">&gt;NAME</text>
+<text x="-0.089" y="-0.111" size="0.762" layer="21" font="vector" ratio="10" rot="R90" align="center">&gt;NAME</text>
 </package>
 <package name="SSOP16">
 <description>&lt;b&gt;Description:&lt;b/&gt; This footprint is untested! Used with the BU4551B.</description>
@@ -2231,6 +2231,32 @@ Source: 8x ADG1408_1409.pdf</description>
 <rectangle x1="2.25" y1="0.825" x2="3.2" y2="1.125" layer="51" rot="R180"/>
 <rectangle x1="2.25" y1="1.475" x2="3.2" y2="1.775" layer="51" rot="R180"/>
 <rectangle x1="2.25" y1="2.125" x2="3.2" y2="2.425" layer="51" rot="R180"/>
+</package>
+<package name="SOIC_WIDE_16">
+<smd name="P1" x="-4.064" y="-4.064" dx="0.5" dy="1" layer="1"/>
+<smd name="P2" x="-2.794" y="-4.064" dx="0.5" dy="1" layer="1"/>
+<smd name="P3" x="-1.524" y="-4.064" dx="0.5" dy="1" layer="1"/>
+<smd name="P4" x="-0.254" y="-4.064" dx="0.5" dy="1" layer="1"/>
+<smd name="P5" x="1.016" y="-4.064" dx="0.5" dy="1" layer="1"/>
+<smd name="P6" x="2.286" y="-4.064" dx="0.5" dy="1" layer="1"/>
+<smd name="P7" x="3.556" y="-4.064" dx="0.5" dy="1" layer="1"/>
+<smd name="P8" x="4.826" y="-4.064" dx="0.5" dy="1" layer="1"/>
+<smd name="P16" x="-3.81" y="5.75" dx="0.5" dy="1" layer="1"/>
+<smd name="P15" x="-2.54" y="5.75" dx="0.5" dy="1" layer="1"/>
+<smd name="P14" x="-1.27" y="5.75" dx="0.5" dy="1" layer="1"/>
+<smd name="P13" x="0" y="5.75" dx="0.5" dy="1" layer="1"/>
+<smd name="P12" x="1.27" y="5.75" dx="0.5" dy="1" layer="1"/>
+<smd name="P11" x="2.54" y="5.75" dx="0.5" dy="1" layer="1"/>
+<smd name="P10" x="3.81" y="5.75" dx="0.5" dy="1" layer="1"/>
+<smd name="P9" x="5.08" y="5.75" dx="0.5" dy="1" layer="1"/>
+<wire x1="-4.81" y1="5.5" x2="-5.31" y2="5.5" width="0.127" layer="25"/>
+<wire x1="-5.31" y1="5.5" x2="-5.31" y2="-3.302" width="0.127" layer="25"/>
+<wire x1="-5.31" y1="-3.302" x2="-4.81" y2="-3.302" width="0.127" layer="25"/>
+<wire x1="5.936" y1="-3.556" x2="6.436" y2="-3.556" width="0.127" layer="25"/>
+<wire x1="6.436" y1="-3.556" x2="6.436" y2="5.5" width="0.127" layer="25"/>
+<wire x1="6.436" y1="5.5" x2="5.936" y2="5.5" width="0.127" layer="25"/>
+<circle x="-3.564" y="-0.032" radius="0.70710625" width="0.127" layer="25"/>
+<text x="0.69" y="3" size="1.27" layer="25" font="vector" align="center">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -2696,6 +2722,63 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 <pin name="VCC" x="10.16" y="7.62" visible="pin" length="short" direction="pwr" rot="R180"/>
 <text x="-6.858" y="11.176" size="1.27" layer="95">&gt;Name</text>
 <text x="-7.112" y="-14.478" size="1.27" layer="96">&gt;Value</text>
+</symbol>
+<symbol name="ADN4663">
+<pin name="DOUT1+" x="10.16" y="10.16" length="middle" rot="R180"/>
+<pin name="DOUT1-" x="10.16" y="7.62" length="middle" rot="R180"/>
+<pin name="DOUT2+" x="10.16" y="2.54" length="middle" rot="R180"/>
+<pin name="DOUT2-" x="10.16" y="0" length="middle" rot="R180"/>
+<pin name="VCC" x="-5.08" y="17.78" length="middle" rot="R270"/>
+<pin name="GND" x="-5.08" y="-7.62" length="middle" rot="R90"/>
+<pin name="DIN1" x="-17.78" y="7.62" length="middle"/>
+<pin name="DIN2" x="-17.78" y="2.54" length="middle"/>
+<wire x1="-12.7" y1="12.7" x2="-12.7" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="12.7" width="0.254" layer="94"/>
+<wire x1="5.08" y1="12.7" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+</symbol>
+<symbol name="ADN4664">
+<pin name="RIN1+" x="-17.78" y="7.62" length="middle"/>
+<pin name="RIN1-" x="-17.78" y="5.08" length="middle"/>
+<pin name="RIN2+" x="-17.78" y="0" length="middle"/>
+<pin name="RIN2-" x="-17.78" y="-2.54" length="middle"/>
+<pin name="ROUT1" x="10.16" y="5.08" length="middle" rot="R180"/>
+<pin name="ROUT2" x="10.16" y="0" length="middle" rot="R180"/>
+<pin name="VCC" x="-2.54" y="15.24" length="middle" rot="R270"/>
+<pin name="GND" x="-2.54" y="-10.16" length="middle" rot="R90"/>
+<wire x1="-12.7" y1="10.16" x2="-12.7" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="10.16" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="5.08" x2="-10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="0" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+</symbol>
+<symbol name="ADUM3440">
+<pin name="VDD2" x="12.7" y="10.16" length="middle" rot="R180"/>
+<pin name="GND2" x="12.7" y="7.62" length="middle" rot="R180"/>
+<pin name="VOA" x="12.7" y="5.08" length="middle" rot="R180"/>
+<pin name="VOB" x="12.7" y="2.54" length="middle" rot="R180"/>
+<pin name="VOC" x="12.7" y="0" length="middle" rot="R180"/>
+<pin name="VOD" x="12.7" y="-2.54" length="middle" rot="R180"/>
+<pin name="VE2" x="12.7" y="-5.08" length="middle" rot="R180"/>
+<pin name="VDD1" x="-15.24" y="10.16" length="middle"/>
+<pin name="GND1" x="-15.24" y="7.62" length="middle"/>
+<pin name="VIA" x="-15.24" y="5.08" length="middle"/>
+<pin name="VIC" x="-15.24" y="0" length="middle"/>
+<pin name="VIB" x="-15.24" y="2.54" length="middle"/>
+<pin name="VID" x="-15.24" y="-2.54" length="middle"/>
+<wire x1="-10.16" y1="12.7" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="12.7" x2="-10.16" y2="12.7" width="0.254" layer="94"/>
+<wire x1="0" y1="12.7" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="7.62" y2="12.7" width="0.254" layer="94"/>
+<wire x1="7.62" y1="12.7" x2="0" y2="12.7" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -3416,6 +3499,77 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 <connect gate="G$1" pin="Z" pad="4"/>
 <connect gate="G$1" pin="Z0" pad="5"/>
 <connect gate="G$1" pin="Z1" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ADN4663">
+<gates>
+<gate name="G$1" symbol="ADN4663" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="8-SOIC">
+<connects>
+<connect gate="G$1" pin="DIN1" pad="P2"/>
+<connect gate="G$1" pin="DIN2" pad="P3"/>
+<connect gate="G$1" pin="DOUT1+" pad="P7"/>
+<connect gate="G$1" pin="DOUT1-" pad="P8"/>
+<connect gate="G$1" pin="DOUT2+" pad="P6"/>
+<connect gate="G$1" pin="DOUT2-" pad="P5"/>
+<connect gate="G$1" pin="GND" pad="P4"/>
+<connect gate="G$1" pin="VCC" pad="P1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ADN4664">
+<gates>
+<gate name="G$1" symbol="ADN4664" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="8-SOIC">
+<connects>
+<connect gate="G$1" pin="GND" pad="P5"/>
+<connect gate="G$1" pin="RIN1+" pad="P2"/>
+<connect gate="G$1" pin="RIN1-" pad="P1"/>
+<connect gate="G$1" pin="RIN2+" pad="P3"/>
+<connect gate="G$1" pin="RIN2-" pad="P4"/>
+<connect gate="G$1" pin="ROUT1" pad="P7"/>
+<connect gate="G$1" pin="ROUT2" pad="P6"/>
+<connect gate="G$1" pin="VCC" pad="P8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ADUM3440">
+<gates>
+<gate name="G$1" symbol="ADUM3440" x="-2.54" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="SOIC_WIDE_16">
+<connects>
+<connect gate="G$1" pin="GND1" pad="P2 P8"/>
+<connect gate="G$1" pin="GND2" pad="P9 P15"/>
+<connect gate="G$1" pin="VDD1" pad="P1"/>
+<connect gate="G$1" pin="VDD2" pad="P16"/>
+<connect gate="G$1" pin="VE2" pad="P10"/>
+<connect gate="G$1" pin="VIA" pad="P3"/>
+<connect gate="G$1" pin="VIB" pad="P4"/>
+<connect gate="G$1" pin="VIC" pad="P5"/>
+<connect gate="G$1" pin="VID" pad="P6"/>
+<connect gate="G$1" pin="VOA" pad="P14"/>
+<connect gate="G$1" pin="VOB" pad="P13"/>
+<connect gate="G$1" pin="VOC" pad="P12"/>
+<connect gate="G$1" pin="VOD" pad="P11"/>
 </connects>
 <technologies>
 <technology name=""/>
