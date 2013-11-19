@@ -2258,6 +2258,18 @@ Source: 8x ADG1408_1409.pdf</description>
 <circle x="-3.564" y="-0.032" radius="0.70710625" width="0.127" layer="25"/>
 <text x="0.69" y="3" size="1.27" layer="25" font="vector" align="center">&gt;VALUE</text>
 </package>
+<package name="NMV0505">
+<pad name="P$1" x="2.54" y="2.54" drill="0.8"/>
+<pad name="P$2" x="5.08" y="2.54" drill="0.8"/>
+<pad name="P$5" x="12.7" y="2.54" drill="0.8"/>
+<pad name="P$6" x="15.24" y="2.54" drill="0.8" rot="R90"/>
+<pad name="P$7" x="17.78" y="2.54" drill="0.8"/>
+<wire x1="-1.27" y1="0" x2="21.59" y2="0" width="0.127" layer="21"/>
+<wire x1="21.59" y1="0" x2="21.59" y2="8.89" width="0.127" layer="21"/>
+<wire x1="21.59" y1="8.89" x2="-1.27" y2="8.89" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="8.89" x2="-1.27" y2="0" width="0.127" layer="21"/>
+<circle x="0" y="1.27" radius="0.635" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LTC3426">
@@ -2779,6 +2791,21 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 <wire x1="0" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="7.62" y1="-7.62" x2="7.62" y2="12.7" width="0.254" layer="94"/>
 <wire x1="7.62" y1="12.7" x2="0" y2="12.7" width="0.254" layer="94"/>
+</symbol>
+<symbol name="NMV0505">
+<pin name="VIN+" x="-12.7" y="5.08" length="middle"/>
+<pin name="VIN-" x="-12.7" y="-5.08" length="middle"/>
+<pin name="VOUT+" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="VOUT-" x="15.24" y="-5.08" length="middle" rot="R180"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<pin name="OV" x="15.24" y="0" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -3570,6 +3597,25 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 <connect gate="G$1" pin="VOB" pad="P13"/>
 <connect gate="G$1" pin="VOC" pad="P12"/>
 <connect gate="G$1" pin="VOD" pad="P11"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="NMV0505">
+<gates>
+<gate name="G$1" symbol="NMV0505" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="NMV0505">
+<connects>
+<connect gate="G$1" pin="OV" pad="P$6"/>
+<connect gate="G$1" pin="VIN+" pad="P$1"/>
+<connect gate="G$1" pin="VIN-" pad="P$2"/>
+<connect gate="G$1" pin="VOUT+" pad="P$7"/>
+<connect gate="G$1" pin="VOUT-" pad="P$5"/>
 </connects>
 <technologies>
 <technology name=""/>
