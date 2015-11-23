@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -3319,6 +3319,7 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 </devices>
 </deviceset>
 <deviceset name="ADS8325">
+<description>16bit high speed 2.7 to 5.5V ADC</description>
 <gates>
 <gate name="G$1" symbol="ADS8325" x="0" y="0"/>
 </gates>
@@ -3534,6 +3535,7 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 </devices>
 </deviceset>
 <deviceset name="ADN4663">
+<description>dual 3v cmos to lvds, differential line driver</description>
 <gates>
 <gate name="G$1" symbol="ADN4663" x="0" y="-2.54"/>
 </gates>
@@ -3556,6 +3558,7 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 </devices>
 </deviceset>
 <deviceset name="ADN4664">
+<description>dual 3v lvds to cmos, differential line receiver</description>
 <gates>
 <gate name="G$1" symbol="ADN4664" x="2.54" y="0"/>
 </gates>
@@ -3578,6 +3581,7 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 </devices>
 </deviceset>
 <deviceset name="ADUM3440">
+<description>quad channel high speed digital isolator</description>
 <gates>
 <gate name="G$1" symbol="ADUM3440" x="-2.54" y="-2.54"/>
 </gates>
