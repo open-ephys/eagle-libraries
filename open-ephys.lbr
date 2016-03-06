@@ -2271,10 +2271,10 @@ Source: 8x ADG1408_1409.pdf</description>
 <circle x="0" y="1.27" radius="0.635" width="0.127" layer="21"/>
 </package>
 <package name="PDS1">
-<pad name="P$1" x="-5.08" y="0" drill="1"/>
-<pad name="P$2" x="-2.54" y="0" drill="1"/>
-<pad name="P$3" x="0" y="0" drill="1"/>
-<pad name="P$4" x="2.54" y="0" drill="1"/>
+<pad name="P1" x="-5.08" y="0" drill="1"/>
+<pad name="P2" x="-2.54" y="0" drill="1"/>
+<pad name="P3" x="0" y="0" drill="1"/>
+<pad name="P4" x="2.54" y="0" drill="1"/>
 <wire x1="-5.08" y1="5.08" x2="-7.112" y2="5.08" width="0.127" layer="21"/>
 <wire x1="-7.112" y1="5.08" x2="-7.112" y2="2.54" width="0.127" layer="21"/>
 <wire x1="2.54" y1="5.08" x2="4.572" y2="5.08" width="0.127" layer="21"/>
@@ -2283,6 +2283,10 @@ Source: 8x ADG1408_1409.pdf</description>
 <wire x1="4.572" y1="-1.524" x2="2.54" y2="-1.524" width="0.127" layer="21"/>
 <wire x1="-7.112" y1="1.016" x2="-7.112" y2="-1.524" width="0.127" layer="21"/>
 <wire x1="-7.112" y1="-1.524" x2="-5.08" y2="-1.524" width="0.127" layer="21"/>
+<text x="-5.08" y="1.27" size="1.27" layer="21" rot="R90">GND</text>
+<text x="-2.54" y="1.27" size="1.27" layer="21" rot="R90">VIN</text>
+<text x="0" y="1.27" size="1.27" layer="21" rot="R90">0V</text>
+<text x="2.54" y="1.27" size="1.27" layer="21" rot="R90">+V0</text>
 </package>
 </packages>
 <symbols>
@@ -3662,10 +3666,10 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 <devices>
 <device name="" package="PDS1">
 <connects>
-<connect gate="G$1" pin="+VO" pad="P$1"/>
-<connect gate="G$1" pin="0V" pad="P$3"/>
-<connect gate="G$1" pin="GND" pad="P$4"/>
-<connect gate="G$1" pin="VIN" pad="P$2"/>
+<connect gate="G$1" pin="+VO" pad="P4"/>
+<connect gate="G$1" pin="0V" pad="P3"/>
+<connect gate="G$1" pin="GND" pad="P1"/>
+<connect gate="G$1" pin="VIN" pad="P2"/>
 </connects>
 <technologies>
 <technology name=""/>
