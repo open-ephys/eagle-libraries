@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2270,6 +2270,20 @@ Source: 8x ADG1408_1409.pdf</description>
 <wire x1="-1.27" y1="8.89" x2="-1.27" y2="0" width="0.127" layer="21"/>
 <circle x="0" y="1.27" radius="0.635" width="0.127" layer="21"/>
 </package>
+<package name="PDS1">
+<pad name="P$1" x="-5.08" y="0" drill="1"/>
+<pad name="P$2" x="-2.54" y="0" drill="1"/>
+<pad name="P$3" x="0" y="0" drill="1"/>
+<pad name="P$4" x="2.54" y="0" drill="1"/>
+<wire x1="-5.08" y1="5.08" x2="-7.112" y2="5.08" width="0.127" layer="21"/>
+<wire x1="-7.112" y1="5.08" x2="-7.112" y2="2.54" width="0.127" layer="21"/>
+<wire x1="2.54" y1="5.08" x2="4.572" y2="5.08" width="0.127" layer="21"/>
+<wire x1="4.572" y1="5.08" x2="4.572" y2="2.54" width="0.127" layer="21"/>
+<wire x1="4.572" y1="1.016" x2="4.572" y2="-1.524" width="0.127" layer="21"/>
+<wire x1="4.572" y1="-1.524" x2="2.54" y2="-1.524" width="0.127" layer="21"/>
+<wire x1="-7.112" y1="1.016" x2="-7.112" y2="-1.524" width="0.127" layer="21"/>
+<wire x1="-7.112" y1="-1.524" x2="-5.08" y2="-1.524" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LTC3426">
@@ -2806,6 +2820,19 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 <wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
 <wire x1="10.16" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
 <pin name="OV" x="15.24" y="0" length="middle" rot="R180"/>
+</symbol>
+<symbol name="PDS1">
+<pin name="VIN" x="0" y="0" length="middle" rot="R90"/>
+<pin name="GND" x="-5.08" y="0" length="middle" rot="R90"/>
+<pin name="0V" x="5.08" y="0" length="middle" rot="R90"/>
+<pin name="+VO" x="10.16" y="0" length="middle" rot="R90"/>
+<wire x1="-7.62" y1="12.7" x2="-7.62" y2="-5.08" width="0.254" layer="199"/>
+<wire x1="-7.62" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="199"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="12.7" width="0.254" layer="199"/>
+<wire x1="2.54" y1="12.7" x2="-7.62" y2="12.7" width="0.254" layer="199"/>
+<wire x1="2.54" y1="12.7" x2="12.7" y2="12.7" width="0.254" layer="199"/>
+<wire x1="12.7" y1="12.7" x2="12.7" y2="-5.08" width="0.254" layer="199"/>
+<wire x1="12.7" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="199"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -3620,6 +3647,25 @@ href='http://www.fairchildsemi.com/ds/MM/MM74HC595.pdf'&gt;http://www.fairchilds
 <connect gate="G$1" pin="VIN-" pad="P$2"/>
 <connect gate="G$1" pin="VOUT+" pad="P$7"/>
 <connect gate="G$1" pin="VOUT-" pad="P$5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PDS1">
+<description>CUI inc. DC-DC converter, see http://www.cui.com/product/resource/pds1-s.pdf</description>
+<gates>
+<gate name="G$1" symbol="PDS1" x="-2.54" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="PDS1">
+<connects>
+<connect gate="G$1" pin="+VO" pad="P$1"/>
+<connect gate="G$1" pin="0V" pad="P$3"/>
+<connect gate="G$1" pin="GND" pad="P$4"/>
+<connect gate="G$1" pin="VIN" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
